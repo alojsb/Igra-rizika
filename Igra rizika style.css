@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+}    
+
+body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-auto-rows: 100px;
+    background-color: rgb(19, 19, 36);
+}
+
+.header{
+    background-color: darkcyan;
+    padding: 20px;
+}
+
+span{
+    padding: 10px;
+}
+
+p#naslov{
+    color: azure;
+    font-size: 5vw;
+    text-shadow: 2px 2px rgb(20, 212, 171),
+                -2px -2px rgb(20, 212, 171),
+                2px -2px rgb(20, 212, 171),
+                -2px 2px rgb(20, 212, 171);
+}
+
+.polje{
+    grid-row: 2/6;
+    background-color: aquamarine;
+    padding: 30px;
+    /* overflow: auto; */
+}
+
+#poljeGlavno{
+    position: relative;
+}
+
+input, #indikator{
+    padding: 5px 10px;
+    display: block;
+    margin: 20px auto;
+    width: 120px;
+}
+
+input:first-of-type{
+    margin-top: 0;
+}
+
+#stolnjak{
+    background-color: white;
+    border: 8px ridge rgb(11, 133, 127);
+    height: 100px;
+}
+
+.stolnjakKec{
+    border: 8px ridge rgb(220, 70, 60);
+}
+
+.poljeKec{
+    background-color: rgb(209, 67, 49);
+}
+
+img#kocka{
+    width: 100px;
+    height: 100px;
+}
+
+img#malaKocka{
+    width: 20px;
+    height: 20px;
+}
+
+.sakrij{
+    display: none;
+}
+
+.aktivan{
+    box-shadow: inset 0px 0px 0px 10px gold;
+}
+
+footer{
+    grid-column: 1/4;
+    grid-row: 6;
+    background-color: darkslateblue;
+    color: white;
+    padding: 20px;
+    text-align: start;
+}
+
+#mali-header-0, #mali-header-1{
+    height: 100px;
+}
+
+#container-0 > div, #container-1 > div{
+    background-color: rgb(28, 133, 101);
+    color: rgb(166, 255, 0);
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.nula{
+    background-color: maroon !important;
+    color: gold !important;
+}
+
+#pokrivac{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+}
+
+#poruka, #poruka2{
+    background-color: rgb(233, 255, 246);
+    position: fixed;
+    width: 50%;
+    height: 20%;
+    top: 25%;
+    left: 25%;
+    border-radius: 5px;
+}
+
+#poruka > p, #poruka2 > p{
+    margin: 30px 20px;
+}
+
+#poruka2 > input{
+    display: inline-block;
+}
+
+.pocetak{
+    background-color: whitesmoke;
+    position: relative;
+}
+
+#modeSelector, #postavkeProzor{
+    position: absolute;
+    width: calc(100% - 120px);
+    height: calc(100% - 120px);
+    top: 30px;
+    background-color: cadetblue;
+    padding: 30px;
+}
+
+#p1{
+    margin-top: 20px;
+}
+
+#pakovanje, h4{
+    margin: auto;
+}
+
+/* h4{
+    margin: auto;
+} */
+
+.odjeli{
+    border-left: 1px solid whitesmoke;
+    border-top: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    padding: 10px;
+}
+
+.odjeli:last-of-type{
+    border-bottom: 1px solid whitesmoke;
+}
+
+.labeli{
+    margin: 5px;
+}
+
+.dugmeInline{
+    display: inline-block;
+    width: 40px;
+    margin: 0px auto;
+}
+
+.settingsUnos{
+    margin: 5px auto;
+}
+
+#dugmeInfo, #dugmeNapomena{
+    border: 2px solid whitesmoke;
+    width: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+    border-radius: 7px;
+    float: right;
+}
+
+#info{
+    position: fixed;
+    background-color: darkslategray;
+    color: whitesmoke;
+    width: 35%;
+    top: 60px;
+    right: 60px;
+    padding: 20px;
+    opacity: 0.85;
+    border-radius: 7px;
+}
+
+#info > p, #info > h4, #napomena > h4{
+    margin-bottom: 15px;
+}
+
+#napomena{
+    position: absolute;
+    background-color: darkslategray;
+    color: whitesmoke;
+    width: 200px;
+    height: 80px;
+    right: 60px;
+    top: 170px;
+    padding: 20px;
+    opacity: 0.85;
+    border-radius: 7px;
+}

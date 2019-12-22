@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Igra rizika 1.13 - 1 player ili 2 player game (očišćen)</title>
+
+    <link rel="stylesheet" href="Igra rizika style.css">
+
+</head>
+<body>
+        <div class="header"><span id="win-0"></span></div>
+        <div id="headerGlavni" class="header"><p id="naslov">Igra rizika</p>
+        </div>
+        <div class="header"><span id="win-1"></span>
+            <div id="dugmeInfo">i</div>
+        </div>  
+        <div id="polje-0" class="polje">
+            <div id="mali-header-0">
+                <h2><span id="ime-0">Igrač</span>:<span id="bodovi-0">0</span></h2>
+                <div id="trenutno-0"></div> <!--lista bacanja trenutni krug-->
+                <div id="total-0" class="sakrij">Ukupno ovaj krug: <span id="saberi-0"></span></div>
+            </div>
+            <div id="container-0">
+            </div>
+        </div>
+        <div id="poljeGlavno" class="polje pocetak">
+            <input id="play" type="button" value="Igraj">
+            <input type="button" id="hold" value="Zadrži">
+            <input id="restart" type="button" value="Počni ponovo">
+            <div id="indikator">Sretno!</div>
+            <div id="stolnjak">
+                <img id="kocka" class="sakrij" src="dice all sides.jpg" alt="kocka">
+            </div>
+            <br>
+            <input id="dugmePostavke2" type="button" value="Postavke">
+            <div id="modeSelector">
+                <h4>Odabir modusa igre</h4>
+                <div id="pakovanje">
+                    <input id="p1" type="button" value="1 igrač">
+                    <input id="p2" type="button" value="2 igrača">
+                    <input id="dugmePostavke" type="button" value="Postavke">
+                </div>
+            </div>
+            <div id="postavkeProzor" class="sakrij">
+                <div class="odjeli">
+                    <div class="naziv">
+                        <p class="labeli">Ciljna visina bodova</p>
+                        <input id="noviCilj" class="settingsUnos" type="text">
+                        <p>(trenutna vrijednost: <span id="goal">30</span>)</p>
+                    </div>
+                </div>
+                <div class="odjeli">
+                        <div class="naziv">
+                            <p class="labeli">Ime prvog igrača:</p>
+                            <input id="novoIme-0" class="settingsUnos" type="text">
+                            <p class="labeli">Ime drugog igrača:</p>
+                            <input id="novoIme-1" class="settingsUnos" type="text">
+                        </div>
+                </div>
+                <div class="odjeli">
+                    <input id="cancel" class="dugmeInline" type="button" value="&#x2613">
+                    <input id="save" class="dugmeInline" type="button" value="&#x2713">
+                    <div id="dugmeNapomena">n</div>
+                    <div id="napomena" class="sakrij">
+                        <h4>Napomena</h4>
+                        <p>Spašavanje promjena resetuje igru.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="polje-1" class="polje">
+            <div id="mali-header-1">
+                <h2><span id="ime-1">Kompjuter</span>:<span id="bodovi-1">0</span></h2>
+                <div id="trenutno-1"></div> <!--lista bacanja trenutni krug-->
+                <div id="total-1" class="sakrij">Ukupno ovaj krug: <span id="saberi-1"></span></div>
+            </div>
+            <div id="container-1">
+            </div>
+        </div>
+        <footer>© Copyright 2019 - Armin Džafo</footer>
+        <div id="pokrivac" class="sakrij"></div>
+        <div id="poruka" class="sakrij"><p>Dobili ste 1. Gubite bodove iz trenutnog kruga.</p><input id="ok" type="button" value="OK"></div>
+        <div id="poruka2" class="sakrij"><p>Promjene spašene. Igra resetovana.</p>
+            <input id="da" type="button" value="Da">
+        </div>
+        <div id="info" class="sakrij">
+            <h4>Pravila igre</h4>
+            <p>Igraju dva igrača jedan protiv drugog ili igrač protiv kompjutera.</p>
+            <p>Svaki igrač u jednom krugu može da baca kocku dok ne dobije 1. Tada gubi sve bodove iz kruga i završava svoj potez.</p>
+            <p>Prije svakog bacanja (osim prvog u krugu) moguće je zadržati bodove, ali onda igrač završava svoj potez.</p>
+            <p>Zadržani bodovi se sabiraju iz kruga u krug.</p>
+            <p>Ko prvi dođe do određenog broja bodova, taj je pobjednik.</p>
+        </div>
+
+    <script src="Igra rizika script.js"></script>
+</body>
+</html>
